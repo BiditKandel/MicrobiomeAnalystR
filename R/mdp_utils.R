@@ -2382,7 +2382,7 @@ PerformBetaDiversity <- function(mbSetObj, plotNm, ordmeth, distName, colopt, me
     clsLbl <- quo(sam_data[[metadata]]);
     
     if (ellopt=="yes"){
-      box = box + stat_ellipse(type="norm", linetype=2, geom = "polygon", alpha = 0.2, aes(fill = !!clsLbl), show.legend=FALSE);
+      box = box + stat_ellipse(type="norm", linetype=2, geom = "polygon", alpha = 0.2, aes(fill = alpha(!!clsLbl, 0)), show.legend=FALSE);
     }
   }
   
